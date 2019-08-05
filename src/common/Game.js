@@ -157,8 +157,10 @@ export default class Game extends GameEngine {
         let paddles = this.world.queryObjects({ instanceType: Paddle });
         if (paddles[0].playerId === ev.playerId) {
             paddles[0].playerId = 0;
+            alert("<-- you are on the left side");
         } else if (paddles[1].playerId === ev.playerId) {
             paddles[1].playerId = 0;
+            alert("you are on the right side -->");
         }
     }
 
