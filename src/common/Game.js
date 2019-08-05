@@ -1,10 +1,10 @@
 import { GameEngine, BaseTypes, TwoVector, DynamicObject, KeyboardControls, SimplePhysicsEngine } from 'lance-gg';
 
 const PADDING = 20;
-const WIDTH = 400;
-const HEIGHT = 400;
+const WIDTH = 800;
+const HEIGHT = 600;
 const PADDLE_WIDTH = 10;
-const PADDLE_HEIGHT = 50;
+const PADDLE_HEIGHT = 100;
 
 // A paddle has a health attribute
 class Paddle extends DynamicObject {
@@ -177,7 +177,6 @@ export default class Game extends GameEngine {
             let health = obj.health>0?obj.health:15;
             el.style.top = obj.position.y + 10 + 'px';
             el.style.left = obj.position.x + 'px';
-            el.style.background = `#ff${health.toString(16)}f${health.toString(16)}f`;
         }
 
         let paddles = this.world.queryObjects({ instanceType: Paddle });
